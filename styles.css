@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -36,7 +35,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-
 section {
     padding: 2em;
     border-bottom: 1px solid #ccc;
@@ -47,22 +45,18 @@ section h1, section h2 {
     text-align: center;
 }
 
+/* About Section */
 #about {
-    background-color: #add8e6; /* Light blue background */
+    background-color: #add8e6;
     padding: 2em;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
 }
 
 .about-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -70,7 +64,7 @@ section h1, section h2 {
 .about-container img {
     width: 100%;
     max-width: 400px;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     border-radius: 50%;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -78,7 +72,7 @@ section h1, section h2 {
 }
 
 .about-container img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.05);
 }
 
 .about-container .about-text {
@@ -87,7 +81,6 @@ section h1, section h2 {
 }
 
 .greeting {
-    text-align: center;
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 10px;
@@ -114,30 +107,61 @@ section h1, section h2 {
     background-color: #005582;
 }
 
+/* Experience Section */
 #experience {
     background-color: #f9f9f9;
     padding: 2em;
     border-radius: 8px;
-    text-align: center;
 }
 
 .experience-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .experience-item {
+    width: 100%;
     max-width: 600px;
     margin-bottom: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
     text-align: center;
 }
 
+#skills ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#skills ul li img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Contact Section */
 #contact {
     background-color: #f0f0f0;
     padding: 2em;
     border-radius: 8px;
-    text-align: center;
 }
 
 .contact-container {
@@ -188,6 +212,7 @@ form textarea {
     background-color: #555;
 }
 
+/* Footer */
 footer {
     background-color: #646464;
     color: #fff;
@@ -198,10 +223,39 @@ footer {
     width: 100%;
 }
 
-@media (max-width: 600px) {
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
     nav ul li {
         display: block;
         margin: 0.5em 0;
+    }
+
+    .about-container, .experience-container, .contact-container {
+        padding: 0 1em;
+    }
+
+    .about-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .experience-item {
+        width: 100%;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .experience-item {
+        width: 100%;
+        margin: 10px 0;
     }
 
     .about-container, .experience-container, .contact-container {
@@ -217,49 +271,4 @@ footer {
     footer {
         position: static;
     }
-}
-
-#experience {
-    background-color: #f9f9f9;
-    padding: 2em;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.experience-container {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to new line if space is insufficient */
-}
-
-.experience-item {
-    width: calc(50% - 20px); /* Adjust width as needed */
-    margin: 10px; /* Add margin between items */
-    padding: 1em;
-    background-color: #fff; /* Add a background color for contrast */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.experience-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add hover effect */
-}
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center; /* Center-align the list items */
-}
-
-#skills ul li {
-    display: inline-block;
-    margin: 0 20px; /* Adjust margin as needed */
-}
-
-#skills ul li img {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    display: block; /* Ensures the image is centered within its parent */
-    margin: 0 auto; /* Centers the image horizontally within its parent */
 }
