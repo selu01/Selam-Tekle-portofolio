@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="C:\Users\Windows-10\Desktop\Selam-Tekle-portofolio\images\Profile_pic.jpg" alt="Your Image">
+            <div class="about-text">
+                <p class="greeting">Hello! I am Selamawit Tekle, and you can call me Seli.</p>
+                <p class="description">I am a passionate developer with a love for creating web applications. I have experience in HTML, CSS, and JavaScript. In my free time, I enjoy learning new technologies and improving my coding skills.</p>
+            </div>
+            <a href="https://www.linkedin.com/in/selamawit-tekle-09b552140/" class="linkedin-button" target="_blank">Connect with me on LinkedIn</a>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <h3>Assistant Lecturer</h3>
+                <p>Mekelle University, 2017-2023</p>
+                <p>Description of your responsibilities and achievements.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Principal Investigator and Trainer in community service</h3>
+                <p>Mekelle University, 2018 - 2018</p>
+                <p>As PI in network installations , Electrical installations , Network cabling and wireless networking for home and business setup services(case study:Tigray TVET)</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Top Skills</h2>
+        <ul>
+            <li><img src="C:\Users\Windows-10\Desktop\Selam-Tekle-portofolio\images\html.png" alt="HTML Icon"></li>
+            <li><img src="C:\Users\Windows-10\Desktop\Selam-Tekle-portofolio\images\css.png" alt="CSS Icon"></li>
+            <li><img src="C:\Users\Windows-10\Desktop\Selam-Tekle-portofolio\images\JS.png" alt="JavaScript Icon"></li>
+            <li><img src="C:\Users\Windows-10\Desktop\Selam-Tekle-portofolio\images\matlab.png" alt="Matlab Icon"></li>
+            <li><img src="C:\Users\Windows-10\Desktop\Selam-Tekle-portofolio\images\arduino.png" alt="Ardunio IDE Icon"></li>
+            
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 All rights reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+            alert('Your message has been sent!');
+        });
+    </script>
+
+<script>
+    const skillImages = document.querySelectorAll('#skills img');
+    skillImages.forEach(image => {
+        image.addEventListener('mouseover', () => {
+            image.style.transform = 'scale(1.2)';
+            image.style.transition = 'transform 0.3s ease';
+        });
+
+        image.addEventListener('mouseout', () => {
+            image.style.transform = 'scale(1)';
+        });
+    });
+</script>
+
+</body>
+</html>

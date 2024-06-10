@@ -1,0 +1,265 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+section {
+    padding: 2em;
+    border-bottom: 1px solid #ccc;
+}
+
+section h1, section h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#about {
+    background-color: #add8e6; /* Light blue background */
+    padding: 2em;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.about-container .about-text {
+    max-width: 600px;
+    font-family: 'Georgia', serif;
+}
+
+.greeting {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.linkedin-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background-color: #005582;
+}
+
+#experience {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-item {
+    max-width: 600px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#contact {
+    background-color: #f0f0f0;
+    padding: 2em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.25em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 0.75em 2em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #646464;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .about-container, .experience-container, .contact-container {
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    .about-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+#experience {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to new line if space is insufficient */
+}
+
+.experience-item {
+    width: calc(50% - 20px); /* Adjust width as needed */
+    margin: 10px; /* Add margin between items */
+    padding: 1em;
+    background-color: #fff; /* Add a background color for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add hover effect */
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center-align the list items */
+}
+
+#skills ul li {
+    display: inline-block;
+    margin: 0 20px; /* Adjust margin as needed */
+}
+
+#skills ul li img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    display: block; /* Ensures the image is centered within its parent */
+    margin: 0 auto; /* Centers the image horizontally within its parent */
+}
