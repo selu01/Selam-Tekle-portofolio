@@ -20,7 +20,7 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="about-container">
-            <img src="images\Profile_pic.jpg" alt="Your Image">
+            <img src="images/Profile_pic.jpg" alt="Your Image">
             <div class="about-text">
                 <p class="greeting">Hello! I am Selamawit Tekle, and you can call me Seli.</p>
                 <p class="description">I am a passionate developer with a love for creating web applications. I have experience in HTML, CSS, and JavaScript. In my free time, I enjoy learning new technologies and improving my coding skills.</p>
@@ -40,28 +40,26 @@
             <div class="experience-item">
                 <h3>Principal Investigator and Trainer in community service</h3>
                 <p>Mekelle University, 2018 - 2018</p>
-                <p>As PI in network installations , Electrical installations , Network cabling and wireless networking for home and business setup services(case study:Tigray TVET)</p>
+                <p>As PI in network installations, Electrical installations, Network cabling, and wireless networking for home and business setup services (case study: Tigray TVET)</p>
             </div>
-            
         </div>
     </section>
 
     <section id="skills">
         <h2>My Top Skills</h2>
         <ul>
-            <li><img src="images\html.png" alt="HTML Icon"></li>
-            <li><img src="images\css.png" alt="CSS Icon"></li>
-            <li><img src="images\JS.png" alt="JavaScript Icon"></li>
-            <li><img src="images\matlab.png" alt="Matlab Icon"></li>
-            <li><img src="images\arduino.png" alt="Ardunio IDE Icon"></li>
-            
+            <li><img src="images/html.png" alt="HTML Icon"></li>
+            <li><img src="images/css.png" alt="CSS Icon"></li>
+            <li><img src="images/JS.png" alt="JavaScript Icon"></li>
+            <li><img src="images/matlab.png" alt="Matlab Icon"></li>
+            <li><img src="images/arduino.png" alt="Arduino IDE Icon"></li>
         </ul>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="contact-container">
-            <form>
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required aria-required="true">
@@ -94,21 +92,18 @@
             }
             alert('Your message has been sent!');
         });
+
+        const skillImages = document.querySelectorAll('#skills img');
+        skillImages.forEach(image => {
+            image.addEventListener('mouseover', () => {
+                image.style.transform = 'scale(1.2)';
+                image.style.transition = 'transform 0.3s ease';
+            });
+
+            image.addEventListener('mouseout', () => {
+                image.style.transform = 'scale(1)';
+            });
+        });
     </script>
-
-<script>
-    const skillImages = document.querySelectorAll('#skills img');
-    skillImages.forEach(image => {
-        image.addEventListener('mouseover', () => {
-            image.style.transform = 'scale(1.2)';
-            image.style.transition = 'transform 0.3s ease';
-        });
-
-        image.addEventListener('mouseout', () => {
-            image.style.transform = 'scale(1)';
-        });
-    });
-</script>
-
 </body>
 </html>
